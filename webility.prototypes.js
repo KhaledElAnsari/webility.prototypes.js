@@ -55,8 +55,12 @@ Array.prototype.exclude = function(searchElement, fromIndex) {
   }
   return this;
 };
-Object.prototype.isEmpty = function() {
+Array.prototype.isEmpty = function() {
   return (this.length === 0);
+};
+Array.prototype.clear = function() {
+  // this will delete the original array and all the references
+  for(var i = this.length; i > 0; i--) this.pop();
 };
 
 // Function
